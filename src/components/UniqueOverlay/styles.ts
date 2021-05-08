@@ -30,38 +30,42 @@ export const Logo = styled(LogoSVG)`
   `;
 
 export const MenuContainer = styled.div`
-  position: relative;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin: 0 20px;
+  display: none;
 
-  > ul {
+  @media (min-width: 1200px) {
     display: flex;
-
-    > li {
-      list-style: none;
-
-    & + li {
-      margin-left: 20px;
-    }
-
-      > a { 
-        text-decoration: none;
-        color: #000;
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 500;
-        letter-spacing: 1px;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    
+    > ul {
+      display: flex;
+      
+      > li {
+        list-style: none;
+        
+        & + li {
+          margin-left: 20px;
+        }
+        
+        > a { 
+          text-decoration: none;
+          color: #000;
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
       }
-    }
-
-    & + ul {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      top: 0;
+      
+      & + ul {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+      }
     }
   }
 `;
